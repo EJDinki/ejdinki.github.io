@@ -61,6 +61,14 @@ Game.update = function()
 
 };
 
+Game.shoot = function()
+{
+    if (!Game.bullet.shown)
+    {
+        Game.bullet.shoot(Game.player.getCenterX(), Game.player.getCenterY());
+    }
+}
+
 Game.addRect = function()
 {
     Game.entities.push(new Rect());
